@@ -4,13 +4,21 @@ This game requires three Javascript files to run simulatenously. (1) app.js cont
 ## Table of Contents
 
 * [How to Play](#play)
+* [How to Run on Local Device](#run)
 
 ## How to Play
 <ul>
-    <li>1. Your character begins at the same location on the board</li>
-    <li>2. Use the directional keys to move your character left, right, up, or down</li>
-    <li>3. The objective is to reach the water on the other side of the stone path</li>
-    <li>4. Everytime you reach the water, your score will increase by 500 points</li>
-    <li>5. Avoid the bugs crossing the path; if you touch one, you'll lose 50 points and a life</li>
-    <li>6. Score as many points as possible before losing 5 lives. It's game over after 5 lives lost</li>
+    <li>Your character begins at the same location on the board</li>
+    <li>Use the directional keys to move your character left, right, up, or down</li>
+    <li>The objective is to reach the water on the other side of the stone path</li>
+    <li>Everytime you reach the water, your score will increase by 500 points</li>
+    <li>Avoid the bugs crossing the path; if you touch one, you'll lose 50 points and a life</li>
+    <li>Score as many points as possible before losing 5 lives. It's game over after 5 lives lost</li>
 </ul>
+
+## How Run on Local Device
+<ol>
+    <li>Download or clone the file repository from github <a href="https://github.com/cmcossio/Arcade-Game.git">here</a></li>
+    <li>Choose a location on your device to unzip all files</li>
+    <li>Open a new tab or window on your favorite browser</li>
+    <li>Press Ctrl-o and find the index.html file associated with this repository. Once you open this file, the game will populate</li>
