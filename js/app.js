@@ -26,16 +26,19 @@ Enemy.prototype.render = function() {
 
 const Player = function () {                //Player object with fixed starting position
     this.sprite = "images/char-boy.png";
+    this.reset();
+}
+
+Player.prototype.reset = function () {
     this.x = 202;
     this.y = 405;
 }
 
-Player.prototype.update = function (dt) {
+Player.prototype.update = function () {
     if (this.y < 0) {                               //player reaches upper limit (water) run add score function 
-        setTimeout (function () {                   //which includes resetting to starting position
-            addScore();
-        }, 300);
-    }
+        addScore();
+        player.reset();                               //which includes resetting to starting position
+}  
 }
 
 Player.prototype.render = function () {
@@ -55,7 +58,6 @@ Player.prototype.handleInput = function (key) {     //when key inputs are presse
     if (key == "down" && this.y < 405) {
         this.y += 83
     }
-    
 }
 
 // Now instantiate your objects.
@@ -85,16 +87,13 @@ document.addEventListener('keyup', function(e) {
 
 //define action when player reaches water
 function addScore() {
-    player.x = 202;
-    player.y = 405;
     score += 500;
     document.getElementById("score").innerHTML = score;
 }
 
 //define action when player hits enemy
 function playerHit() {
-    player.x = 202;
-    player.y = 405;
+    player.reset();
     if (score > 0) {
         score -= 50;
         document.getElementById("score").innerHTML = score;
